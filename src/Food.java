@@ -16,10 +16,10 @@ public class Food extends Product {
 
         long difference = DAYS.between(expireDate, LocalDate.now());
 
-        if (difference == 5)
-            return  0.05;
         if (difference == 0)
             return 0.5;
+        if (difference <= 5)
+            return  0.05;
 
         return 0.0;
 
